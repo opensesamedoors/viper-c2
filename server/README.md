@@ -1,13 +1,9 @@
 # Viper | Command & Control Server
 
-<br>
-
 ## Setup
 Download the `server-windows.exe` or the `server-linux` binary
 from the releases tab, create a directory for your server, and then you can
 just run it
-
-<br>
 
 ## Configuration
 The viper C2 server can by creating `config.json` to file, here are all the
@@ -32,13 +28,9 @@ Set to `true` if you want to use HTTP Only cookies, defaukt is `false`
 - ### `cookie_secure`
 Set to `true` if you want to use secure cookies, default is `true`
 
-<br>
-
 ## The Database
 Database is a just directory with JSON files in it, if you want to transfer your
 server etc. you need to transfer this directory as well to keep all the data
-
-<br>
 
 ## How Does the Sever Work?
 The C2 server has 2 different types of clients that connects to it.
@@ -108,7 +100,7 @@ by the operators, agents need to register using a valid token and all their requ
 ## Endpoints 
 Here are all the endpoints for the C2 web server 
 
-- ### Operator Endpoints (`/operator`)
+#### Operator Endpoints (`/operator`)
 * #### GET `/version`
 Returns server version, requires auth
 
@@ -157,7 +149,7 @@ Removes the `<token>`, requires auth
 * #### GET `/agents` 
 Returns a list of agents, requires auth 
 
-- ### Agent Endpoints (`/agent`)
+#### Agent Endpoints (`/agent`)
 * #### POST `/register`
 Example body:
 ```json
