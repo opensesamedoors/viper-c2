@@ -4,6 +4,8 @@
     <img src="assets/viper.png">  
 </div>
 
+---
+
 <br>
 
 ### 🧐 What is Viper?
