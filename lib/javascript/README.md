@@ -4,7 +4,7 @@ JavaScript API library can be used to interact with a viper web server,
 
 ## Setup
 To use the viperjs library, link it to your HTML before your actual JS:
-```
+```html
 <script type="text/javascript" src="https://github.com/ngn13/viper/raw/main/lib/javascript/viper.js"></script>
 ```
 
@@ -15,7 +15,7 @@ To use the viperjs library, link it to your HTML before your actual JS:
 <br>
 <button id="version">Get Server Version</button>
 
-<script type="text/javascript" src="viper.js"></script>
+<script type="text/javascript" src="https://github.com/ngn13/viper/raw/main/lib/javascript/viper.js"></script>
 <script>
   const version = document.getElementById("version")
   const area = document.getElementById("area")
