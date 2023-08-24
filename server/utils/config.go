@@ -7,6 +7,7 @@ import (
 )
 
 type ServerConfig struct {
+  CORS              string    `json:"cors"`
   Address           string    `json:"address"`
   Password          string    `json:"password"`
   Domain            string    `json:"domain"`
@@ -19,7 +20,7 @@ type ServerConfig struct {
 }
 
 var Config ServerConfig = ServerConfig{}
-var Version string = "1.1"
+var Version string = "1.2"
 
 // reads and loads config from "config.json"
 func ReadConfig(){
@@ -32,6 +33,7 @@ func ReadConfig(){
   Config.ServerHeader   = "nginx"
   Config.HttpOnlyCookie = false
   Config.SecureCookie   = true 
+  Config.CORS           = "" 
 
   raw, err := ioutil.ReadFile("config.json")
   if err != nil {

@@ -46,7 +46,7 @@ class Operator:
         if res["error"] != "":
             raise ServerError(res["error"])
 
-        return res["version"]
+        return res["result"]
 
     def logout(self) -> None:
         res = req.get(self.url+"/logout", cookies=self.cookies()).json()

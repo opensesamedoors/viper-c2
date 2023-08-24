@@ -11,7 +11,7 @@ import (
 func Version(c *gin.Context){
   c.JSON(http.StatusOK, gin.H {
     "error": "",
-    "version": utils.Version, 
+    "result": utils.Version, 
   })
 }
 
