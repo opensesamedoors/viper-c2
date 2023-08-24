@@ -11,22 +11,21 @@ To use the viperjs library, link it to your HTML before your actual JS:
 ## Examples
 ### Example Operator Client 
 ```html
-<button id="btn">Get Server Version</button>
 <textarea id="area"></textarea>
+<br>
+<button id="version">Get Server Version</button>
 
-<script type="text/javascript" src="https://github.com/ngn13/viper/raw/main/lib/viperjs/viper.js"></script>
+<script type="text/javascript" src="viper.js"></script>
 <script>
-    const btn = document.getElementById("btn")
-    const area = document.getElementById("area")
+  const version = document.getElementById("version")
+  const area = document.getElementById("area")
 
-    op = new Operator("http://localhost:8080", "ngn", "changeme")
+  op = new Operator("http://localhost:8080", "ngn", "changeme")
 
-    btn.addEventListener("click", async ()=>{
-        try {
-            area.value = await op.get_version()  
-        }catch(e){
-            area.value = "Error: "+e
-        }
-    })
+  version.addEventListener("click", async ()=>{
+    await op.login()
+    area.value = await op.get_version()  
+    await op.logout()
+  })
 </script>
 ```
