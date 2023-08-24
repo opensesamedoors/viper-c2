@@ -27,8 +27,8 @@ Specify a custom server header for the responses, default is `nginx`
 Set to `true` if you want to use HTTP Only cookies, defaukt is `false`
 - ### `cookie_secure`
 Set to `true` if you want to use secure cookies, default is `true`
-- ### `allow_cors`
-Set to `false` if you don't want to allow CORS, default is `true`
+- ### `cors`
+Set to CORS header (`Access-Control-Allow-Origin`) value, if you don't want CORS, set it to `""`, default is `""`
 
 ## The Database
 Database is a just directory with JSON files in it, if you want to transfer your
